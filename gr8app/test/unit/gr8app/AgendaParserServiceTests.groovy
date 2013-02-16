@@ -11,7 +11,7 @@ import org.junit.*
 @TestFor(AgendaParserService)
 class AgendaParserServiceTests {
 
-    void testSomething() {
-        fail "Implement me"
+    void testCallGr8conf() {
+        service.call()
     }
 }
