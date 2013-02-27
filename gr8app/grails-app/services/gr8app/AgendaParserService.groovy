@@ -8,7 +8,13 @@ class AgendaParserService {
         def url = "http://gr8conf.org/mobile/eu2012/Agenda"
         def data = JSON.parse( new URL( url ).text )
         println data
-        println data.days[1].blocks.size()
+        def days = data.days
+
+        println "day0 = ${days[0]}"
+
+        days.each {
+            new Day()
+        }
 
     }
 }
