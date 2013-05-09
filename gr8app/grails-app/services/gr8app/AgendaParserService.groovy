@@ -5,7 +5,7 @@ import grails.converters.JSON
 class AgendaParserService {
 
     def call() {
-        def url = "http://gr8conf.org/mobile/eu2012/Agenda"
+        def url = "http://gr8conf.org/mobile/eu2013/Agenda"
         def data = JSON.parse( new URL( url ).text )
         println data
         def days = data.days
