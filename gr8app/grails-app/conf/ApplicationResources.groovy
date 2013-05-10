@@ -8,4 +8,13 @@ modules = {
         resource url: 'css/mobile.css'
         resource url: 'less/trackapp.less', attrs: [rel: "stylesheet/less", type: 'css']
     }
+
+    'trackapp-style' {
+        resource url: 'less/trackapp.less', attrs: [rel: "stylesheet/less", type: 'css']
+    }
+
+    'logo-resizer' {
+        dependsOn 'jquery'
+        resource url: 'js/logo-resizer.js'
+    }
 }
