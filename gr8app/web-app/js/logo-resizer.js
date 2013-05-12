@@ -1,7 +1,8 @@
 $(function () {
 
     $(window).on('resize', function () {
-        var ratio = 70*$(this).width()/1920;
-        $('#logo').css('background-size',ratio+'%');
+        var ratio = $(this).width()/1920;
+        $('#logo').css('background-size',70*ratio+'%');
+        $('#main').css('font-size', 150*ratio+'%');
     }).trigger('resize');
 });

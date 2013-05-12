@@ -10,11 +10,16 @@ modules = {
     }
 
     'trackapp-style' {
+        dependsOn 'nexa-fonts'
         resource url: 'less/trackapp.less', attrs: [rel: "stylesheet/less", type: 'css']
     }
 
     'logo-resizer' {
         dependsOn 'jquery'
         resource url: 'js/logo-resizer.js'
+    }
+
+    'nexa-fonts' {
+        resource url: 'css/NexaWebfontsKit.css'
     }
 }
