@@ -20,14 +20,15 @@
     function func() {
         var counter = $('#counter');
         console.debug(counter.html());
-        counter.html(counter.html() - 1);
+        counter.html(parseInt(counter.html()) - 1);
         counter.fitText(0.2);
-        if (counter.html() <= 5) {
+        if ( 0 < counter.html() && counter.html() <= 5) {
             counter.css('color', "yellow")
-        }
-        if (counter.html() == 0) {
+        } else if (counter.html() == 0) {
             clearInterval(counterInterval);
             counter.css('color', "red")
+        } else {
+            counter.css('color', "white")
         }
     }
 </r:script>
