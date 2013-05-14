@@ -22,4 +22,8 @@ modules = {
     'nexa-fonts' {
         resource url: 'css/NexaWebfontsKit.css'
     }
+
+    'jquery-fittext' {
+        resource url:'js/jquery/plugins/jquery.fittext.js'
+    }
 }
