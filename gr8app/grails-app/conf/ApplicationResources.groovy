@@ -26,4 +26,8 @@ modules = {
     'jquery-fittext' {
         resource url:'js/jquery/plugins/jquery.fittext.js'
     }
+
+    'jquery-fullscreen' {
+        resource url:'js/jquery/plugins/jquery.fullscreen.js'
+    }
 }

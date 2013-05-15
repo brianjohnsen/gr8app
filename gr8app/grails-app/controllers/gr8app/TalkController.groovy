@@ -1,12 +1,19 @@
 package gr8app
 
+import grails.converters.JSON
+
 class TalkController {
 
-    def index() { }
+    def index() {
+        [slotId:"11"]
+    }
 
 
-    def getShowDataAJAX() {
-
+    def slotRemainingTimeAJAX(long slotId) {
+        println slotId
+        Map slotInformation = [:]
+        slotInformation.remaining = 2
+        render slotInformation as JSON
     }
 
 }

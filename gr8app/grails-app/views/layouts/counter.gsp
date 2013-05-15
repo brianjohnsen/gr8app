@@ -14,6 +14,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'counter.css')}" type="text/css">
         <r:require module="jquery-fittext" />
+        <r:require module="jquery-fullscreen" />
         <r:require modules="trackapp-style"/>
 		<g:layoutHead/>
         <r:require module="jquery"/>
