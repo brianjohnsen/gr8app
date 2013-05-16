@@ -32,7 +32,7 @@
     function setCounterColor(counter) {
         if ( 5 < counter.html() && counter.html() <= 10) {
             counter.css('color', "yellow")
-        } else if ( 0 < counter.html() && counter.html() <= 5) {
+        } else if ( 0 <= counter.html() && counter.html() <= 5) {
             counter.css('color', "red")
         }  else {
             counter.css('color', "white")
