@@ -11,4 +11,9 @@ class Day {
 
     static constraints = {
     }
+
+    @Override
+    String toString() {
+        dump()
+    }
 }

@@ -6,6 +6,9 @@ import spock.lang.Specification
 @TestFor(AgendaParserService)
 class AgendaParserServiceSpec extends Specification {
 
+    def setup(){
+    }
+
     def "testCallGr8conf"() {
         expect:
         service.call()
