@@ -16,12 +16,12 @@ class AgendaParserService {
 //        println data.toString(2)
         def days = data.days
 
-        println "day0= ${days[0]}"
-
-        days.each {
-//            println it.start//.toString(2)
-            def day = new Day(start: Date.parseJSON(it.start), end: Date.parseJSON(it.end))
+        days.each {d->
+            def day = new Day(start: Date.parseJSON(d.start), end: Date.parseJSON(d.end))
             println day
+            def tracks = d.blocks.collect{b-> b.tracks}
+            println tracks.size()
+            tracks.each {t-> println t.name}
         }
 
     }
