@@ -17,7 +17,6 @@
     var counterInterval = window.setInterval(counter, 1000);
     var updateInterval = window.setInterval(updateRemainingTime, 5000);
 
-
     function counter() {
         var counter = $('#counter');
         counter.html(parseInt(counter.html()) - 1);
@@ -48,7 +47,6 @@
             }
         });
     }
-
 </r:script>
 </body>
 </html>
