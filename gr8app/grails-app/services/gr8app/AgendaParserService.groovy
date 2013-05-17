@@ -10,7 +10,7 @@ class AgendaParserService {
         println data
         def days = data.days
 
-        println "day0 = ${days[0]}"
+        println "day0= ${days[0]}"
 
         days.each {
             new Day()
