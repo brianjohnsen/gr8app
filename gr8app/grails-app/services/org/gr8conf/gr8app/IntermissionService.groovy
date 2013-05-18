@@ -3,7 +3,7 @@ package org.gr8conf.gr8app
 import gr8app.Slot
 
 
-class Intermission2Service {
+class IntermissionService {
 
     Map<String, List<Slot>> getUpcomingSlotsByRoom(Date time) {
         def restOfDaySlots = Slot.findAllByStartBetween(time, (time + 1).clearTime())

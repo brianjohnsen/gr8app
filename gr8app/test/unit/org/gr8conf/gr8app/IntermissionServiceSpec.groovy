@@ -5,9 +5,9 @@ import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
-@TestFor(Intermission2Service)
+@TestFor(IntermissionService)
 @Mock(Slot)
-class Intermission2Service2Spec extends Specification {
+class IntermissionServiceSpec extends Specification {
 
     def setup() {
         createAndSaveSlot("Aud1", new Date("5/22-2013 13:55"), new Date("5/22-2013 14:00"), 1, true)
