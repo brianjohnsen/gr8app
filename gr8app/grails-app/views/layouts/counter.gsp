@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'counter.css')}" type="text/css">
         <r:require module="jquery-fittext" />
         <r:require module="jquery-fullscreen" />
-        <r:require modules="trackapp-style"/>
+        <r:require modules="gr8app-style"/>
 		<g:layoutHead/>
         <r:require module="jquery"/>
 		<r:layoutResources />

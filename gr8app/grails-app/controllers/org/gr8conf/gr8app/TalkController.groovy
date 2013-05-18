@@ -1,4 +1,4 @@
-package gr8app
+package org.gr8conf.gr8app
 
 import grails.converters.JSON
 
@@ -14,6 +14,12 @@ class TalkController {
         Map slotInformation = [:]
         slotInformation.remaining = 2
         render slotInformation as JSON
+    }
+
+
+    def intermission(String room) {
+
+
     }
 
 }

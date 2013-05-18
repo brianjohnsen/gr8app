@@ -1,4 +1,4 @@
-package org.gr8conf.trackapp
+package org.gr8conf.gr8app
 
 class TestLayoutController {
 

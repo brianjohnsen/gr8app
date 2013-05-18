@@ -6,12 +6,12 @@ modules = {
     'style' {
         resource url: 'css/main.css'
         resource url: 'css/mobile.css'
-        resource url: 'less/trackapp.less', attrs: [rel: "stylesheet/less", type: 'css']
+        resource url: 'less/gr8app.less', attrs: [rel: "stylesheet/less", type: 'css']
     }
 
-    'trackapp-style' {
+    'gr8app-style' {
         dependsOn 'nexa-fonts'
-        resource url: 'less/trackapp.less', attrs: [rel: "stylesheet/less", type: 'css']
+        resource url: 'less/gr8app.less', attrs: [rel: "stylesheet/less", type: 'css']
     }
 
     'logo-resizer' {

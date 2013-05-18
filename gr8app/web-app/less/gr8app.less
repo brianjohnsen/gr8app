@@ -52,12 +52,29 @@ body {
   #main {
     height: 100%;
     margin: 12% 8%;
-    padding: 20px;
-    border-radius: 40px;
-    background-color: rgba(255, 255, 255, 0.60);
-    box-shadow: 0px 0px 17px rgba(50, 50, 50, 0.15);
     h1 {
       text-align: center;
+    }
+  }
+
+  #other-room {
+    color: #888;
+    text-shadow: #999 1px 1px 10px;
+  }
+
+  #equal-width-wrapper {
+    display: table;
+    table-layout: fixed;
+    width:90%;
+    height:100%;
+    border-spacing: 20px;
+    div {
+      display: table-cell;
+      height:100%;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.60);
+      box-shadow: 0px 0px 17px rgba(50, 50, 50, 0.15);
+      border-radius: 40px;
     }
   }
 }
