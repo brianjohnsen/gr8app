@@ -7,7 +7,6 @@ class Slot {
     String speaker
     Date start
     Date end
-    int duration
     boolean pause = false
 
 
