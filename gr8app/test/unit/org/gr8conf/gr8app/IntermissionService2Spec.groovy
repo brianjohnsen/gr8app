@@ -7,7 +7,7 @@ import spock.lang.Specification
 
 @TestFor(IntermissionService)
 @Mock(Slot)
-class IntermissionServiceSpec extends Specification {
+class IntermissionService2Spec extends Specification {
 
     def setup() {
         createAndSaveSlot("Aud1", new Date("5/22-2013 13:55"), new Date("5/22-2013 14:00"), 1, true)
