@@ -32,7 +32,10 @@ class AgendaParserService {
         def track = new Track(name: jsonTrack.name)
         jsonTrack.schedules.each { jsonSchedule ->
             def speakers = jsonSchedule.presentation.speakers.collect { it.name }
-            def slot = new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, speakers: speakers, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate())
+            def slot = new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate())
+            speakers.each {speaker->
+                slot.addToSpeakers(name: speaker)
+            }
             track.addToSlots(slot)
         }
         track
