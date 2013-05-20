@@ -7,6 +7,7 @@ class AgendaParserService {
 
 
     void importAgendaData() {
+        //FIXME: move to bootstrap
         String.metaClass.'static'.toDate = {
             def d = Date.parse("yyyy-MM-dd'T'HH:mm:ss", delegate)
             d.hours += 2
@@ -18,10 +19,13 @@ class AgendaParserService {
             def day = new Day(start: jsonDay.start.toDate(), end: jsonDay.end.toDate()).save(flush: true, failOnError: true)
             findTracks(jsonDay).each { jsonTrack ->
                 def track = createTrackAndAddSlots(jsonTrack)
+                findBreaks(jsonDay, jsonTrack).each { brk ->
+                    track.addToSlots(brk)
+                }
                 day.addToTracks(track)
             }
+            day.save(flush: true)
         }
-
     }
 
     private Track createTrackAndAddSlots(jsonTrack) {
@@ -37,6 +41,10 @@ class AgendaParserService {
     private List findTracks(jsonDay) {
         def tracks = jsonDay.blocks.collect { jsonBlock -> jsonBlock.tracks }.flatten()
         tracks
+    }
+
+    private List<Slot> findBreaks(jsonDay, jsonTrack) {
+        jsonDay.breaks.collect { brk -> new Slot(name: brk.title, room: jsonTrack.room, pause: true, start: brk.start.toDate(), end: brk.end.toDate()) }
     }
 
     private JSONElement callGr8conf() {
