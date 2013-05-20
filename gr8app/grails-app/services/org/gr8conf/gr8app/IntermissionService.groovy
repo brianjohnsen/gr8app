@@ -1,19 +1,23 @@
 package org.gr8conf.gr8app
 
 import gr8app.Slot
-
+import groovy.time.*
 
 class IntermissionService {
 
-    Map<String, List<Slot>> getUpcomingSlotsByRoom(Date time) {
-        def restOfDaySlots = Slot.findAllByStartBetween(time, (time + 1).clearTime())
+    Map<String, List<Slot>> getUpcomingSlotsByRoom(Date time = new Date()) {
+        Date endTime
+        use([groovy.time.TimeCategory]) {
+            endTime = (time + 4.hours)
+        }
+        def restOfDaySlots = Slot.findAllByEndBetweenOrStartBetween(time, endTime, time, endTime)
         def roomMappedSlots = restOfDaySlots.groupBy { it.room }
         roomMappedSlots.each { room, slots ->
             def sortedSlots = slots.sort { it.start }
             ArrayList keepSlots = getTwoEarliestTalksAndAllBreaksInBetween(sortedSlots)
             roomMappedSlots."$room" = keepSlots
         }
-        return roomMappedSlots
+        return roomMappedSlots.findAll {it.value}
     }
 
     private ArrayList getTwoEarliestTalksAndAllBreaksInBetween(List<Slot> sortedSlots) {

@@ -2,26 +2,55 @@
 <html>
 <head>
     <meta name="layout" content="tracks"/>
-    <title>Simple GSP page</title></head>
+    <title>Intermission page</title></head>
 
 <body>
+    <g:if test="${mainRoomSlots == null && (remainingRooms + offTrack).size() == 0}">
+        <div id="equal-width-wrapper">
+            <div>
+                <h1>NO EVENTS TODAY</h1>
+            </div>
+        </div>
+    </g:if>
+<g:if test="${(mainRoomSlots || remainingRooms)}">
 <div id="equal-width-wrapper">
     <div>
-        <h1>Room 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <p>Paragraph with <strong>strong text</strong> and <em>emphasized text</em> to test the major styles</p>
+        <h1>${mainRoom}</h1>
+        <g:if test="${!mainRoomSlots}">No Events</g:if>
+        <g:else>
+        <dl>
+        <g:each var="slot" in="${mainRoomSlots}">
+            <dt>${String.format('%tR', slot.start) + " - " + String.format('%tR', slot.end)}<br/>
+            <h2>${slot.name}</h2></dt><dd>${slot.speakers?.join(", ")}</dd>
+        </g:each>
+        </dl>
+        </g:else>
     </div>
+    <g:each var="room" in="${remainingRooms}">
     <div id="other-room">
-        <h1>Room 2</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <p>Paragraph with <strong>strong text</strong> and <em>emphasized text</em> to test the major styles</p>
+        <h1>${room.key}</h1>
+        <dl>
+        <g:each var="slot" in="${room.value}">
+            <dt>${String.format('%tR', slot.start) + " - " + String.format('%tR', slot.end)}<br/>
+            <h2>${slot.name }</h2></dt><dd>${slot.speakers?.join(", ")}</dd>
+        </g:each>
+        </dl>
     </div>
+    </g:each>
 </div>
+</g:if>
+    <div id="equal-width-wrapper">
+        <g:each var="room" in="${offTrack}">
+            <div id="other-room">
+                <h1>${room.key}</h1>
+                <dl>
+                    <g:each var="slot" in="${room.value}">
+                        <dt>${String.format('%tR', slot.start) + " - " + String.format('%tR', slot.end)}<br/>
+                        <h2>${slot.name }</h2></dt><dd>${slot.speakers?.join(", ")}</dd>
+                    </g:each>
+                </dl>
+            </div>
+        </g:each>
+    </div>
 </body>
 </html>
