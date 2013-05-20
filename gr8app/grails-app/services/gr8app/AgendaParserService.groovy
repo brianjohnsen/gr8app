@@ -1,35 +1,48 @@
 package gr8app
 
 import grails.converters.JSON
+import org.codehaus.groovy.grails.web.json.JSONElement
 
 class AgendaParserService {
 
+
     def call() {
-        Date.metaClass.'static'.parseJSON = { String date ->
-            Date.parse("yyyy-MM-dd'T'HH:mm:ss", date)
+        String.metaClass.'static'.toDate = {
+            def d = Date.parse("yyyy-MM-dd'T'HH:mm:ss", delegate)
+            d.hours += 2
+            d
         }
 
-
-
-        def url = "http://gr8conf.org/mobile/eu2013/Agenda"
-        def data = JSON.parse(new URL(url).text)
-//        println data.toString(2)
-        def days = data.days
-
-        days.each { d ->
-            def day = new Day(start: Date.parseJSON(d.start), end: Date.parseJSON(d.end)).save(flush: true, failOnError: true)
-            def tracks = d.blocks.collect { b -> b.tracks }.flatten()
-            tracks.each { t ->
-                def track = new Track(name: t.name, room: t.room)
-                t.schedules.each {s->
-                    def speakers = s.presentation.speakers.collect{it.name}
-                    def slot = new Slot(name: s.presentation.name, speakers: speakers, start: Date.parseJSON(s.start), end: Date.parseJSON(s.end))
-                    track.addToSlots(slot)
-                }
+        def data = callGr8conf()
+        data.days.each { jsonDay ->
+            def day = new Day(start: jsonDay.start.toDate(), end: jsonDay.end.toDate()).save(flush: true, failOnError: true)
+            findTracks(jsonDay).each { jsonTrack ->
+                def track = createTrackAndAddSlots(jsonTrack)
                 day.addToTracks(track)
             }
             println day
         }
 
+    }
+
+    private Track createTrackAndAddSlots(jsonTrack) {
+        def track = new Track(name: jsonTrack.name, room: jsonTrack.room)
+        jsonTrack.schedules.each { jsonSchedule ->
+            def speakers = jsonSchedule.presentation.speakers.collect { it.name }
+            def slot = new Slot(name: jsonSchedule.presentation.name, speakers: speakers, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate())
+            track.addToSlots(slot)
+        }
+        track
+    }
+
+    private List findTracks(jsonDay) {
+        def tracks = jsonDay.blocks.collect { jsonBlock -> jsonBlock.tracks }.flatten()
+        tracks
+    }
+
+    private JSONElement callGr8conf() {
+        def url = "http://gr8conf.org/mobile/eu2013/Agenda"
+        def data = JSON.parse(new URL(url).text)
+        data
     }
 }

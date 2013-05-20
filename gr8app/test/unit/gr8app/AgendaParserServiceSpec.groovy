@@ -26,6 +26,6 @@ class AgendaParserServiceSpec extends Specification {
         firstSlot.name == "*) Getting Groovy Workshop"
         firstSlot.speakers.size() == 1
         firstSlot.speakers.first() == "Hubert Klein Ikkink (Mr.HaKi)"
-        firstSlot.start == new Date("2013/05/22 07:00")
+        firstSlot.start == new Date("2013/05/22 09:00")
     }
 }
