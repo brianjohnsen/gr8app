@@ -8,21 +8,25 @@ import spock.lang.Specification
 @TestFor(AgendaParserService)
 class AgendaParserServiceSpec extends Specification {
 
-    def setup(){
+    def setup() {
+        service.importAgendaData()
     }
 
     def "imports agenda data from gr8conf site"() {
+        expect:
+        Day.count() == 3
+
         when:
-        service.importAgendaData()
+        def days = Day.list()
 
         then:
-        Day.count() == 3
-        def days = Day.list()
         days.first().tracks.size() == 3
 
         and:
         def track1 = days.first().tracks.first()
         track1.name == "University Basic Trac"
+
+        and:
         def firstSlot = track1.slots.first()
         firstSlot.room == "AUD-1"
         firstSlot.name == "*) Getting Groovy Workshop"
@@ -31,9 +35,19 @@ class AgendaParserServiceSpec extends Specification {
         firstSlot.start == new Date("2013/05/22 09:00")
     }
 
+    def "multiple speakers"() {
+        when:
+        def slot = Slot.findByName("*) Unleashing the power of AST transformations workshop")
+
+        then:
+        slot
+        slot.speakers.size() == 2
+        "Cédric Champeau" in slot.speakers
+        "Andres Almiray" in slot.speakers
+    }
+
     def "imports breaks"() {
         when:
-        service.importAgendaData()
         def pauser = Slot.findAllByPause(true)
 
         then:
