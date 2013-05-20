@@ -11,14 +11,16 @@ class AgendaParserServiceSpec extends Specification {
     def setup(){
     }
 
-    def "testCallGr8conf"() {
+    def "imports agenda data from gr8conf site"() {
         when:
-        service.call()
+        service.importAgendaData()
 
         then:
         Day.count() == 3
         def days = Day.list()
         days.first().tracks.size() == 3
+
+        and:
         def track1 = days.first().tracks.first()
         track1.name == "University Basic Trac"
         def firstSlot = track1.slots.first()
@@ -27,5 +29,22 @@ class AgendaParserServiceSpec extends Specification {
         firstSlot.speakers.size() == 1
         firstSlot.speakers.first() == "Hubert Klein Ikkink (Mr.HaKi)"
         firstSlot.start == new Date("2013/05/22 09:00")
+    }
+
+    def "imports breaks"() {
+        when:
+        service.importAgendaData()
+
+        then:
+        def days = Day.list()
+        def track1 = days[1].tracks.first()
+//
+//        track1.name == "University Basic Trac"
+//        def firstSlot = track1.slots.first()
+//        firstSlot.room == "AUD-1"
+//        firstSlot.name == "*) Getting Groovy Workshop"
+//        firstSlot.speakers.size() == 1
+//        firstSlot.speakers.first() == "Hubert Klein Ikkink (Mr.HaKi)"
+//        firstSlot.start == new Date("2013/05/22 09:00")
     }
 }

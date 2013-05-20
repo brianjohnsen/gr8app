@@ -6,7 +6,7 @@ import org.codehaus.groovy.grails.web.json.JSONElement
 class AgendaParserService {
 
 
-    def call() {
+    void importAgendaData() {
         String.metaClass.'static'.toDate = {
             def d = Date.parse("yyyy-MM-dd'T'HH:mm:ss", delegate)
             d.hours += 2
@@ -20,16 +20,15 @@ class AgendaParserService {
                 def track = createTrackAndAddSlots(jsonTrack)
                 day.addToTracks(track)
             }
-            println day
         }
 
     }
 
     private Track createTrackAndAddSlots(jsonTrack) {
-        def track = new Track(name: jsonTrack.name, room: jsonTrack.room)
+        def track = new Track(name: jsonTrack.name)
         jsonTrack.schedules.each { jsonSchedule ->
             def speakers = jsonSchedule.presentation.speakers.collect { it.name }
-            def slot = new Slot(name: jsonSchedule.presentation.name, speakers: speakers, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate())
+            def slot = new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, speakers: speakers, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate())
             track.addToSlots(slot)
         }
         track

@@ -11,6 +11,6 @@ class Track {
 
     @Override
     String toString() {
-        "$name ($room): slots = $slots"
+        "$name: slots = $slots"
     }
 }
