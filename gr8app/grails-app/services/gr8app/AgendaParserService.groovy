@@ -20,10 +20,10 @@ class AgendaParserService {
             def day = new Day(start: Date.parseJSON(d.start), end: Date.parseJSON(d.end)).save(flush: true, failOnError: true)
             def tracks = d.blocks.collect { b -> b.tracks }.flatten()
             tracks.each { t ->
-                def track = new Track(name: t.name, room: t.room)
+                def track = new Track(name: t.name)
                 t.schedules.each {s->
                     def speakers = s.presentation.speakers.collect{it.name}
-                    def slot = new Slot(name: s.presentation.name, speakers: speakers, start: Date.parseJSON(s.start), end: Date.parseJSON(s.end))
+                    def slot = new Slot(name: s.presentation.name, speakers: speakers, start: Date.parseJSON(s.start), end: Date.parseJSON(s.end), room: t.room)
                     track.addToSlots(slot)
                 }
                 day.addToTracks(track)

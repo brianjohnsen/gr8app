@@ -7,7 +7,7 @@ class Slot {
     Date start
     Date end
     boolean pause = false
-
+    String room
 
     static constraints = {
     }
