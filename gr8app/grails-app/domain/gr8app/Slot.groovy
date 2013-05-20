@@ -1,5 +1,6 @@
 package gr8app
 
+
 class Slot {
 
     String name
@@ -14,6 +15,6 @@ class Slot {
 
     @Override
     String toString() {
-        dump()
+        name
     }
 }
