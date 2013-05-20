@@ -4,13 +4,25 @@ import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
-@Mock([Day, Track, Slot])
+@Mock([Day, Track, Slot, Speaker])
 @TestFor(AgendaParserService)
 class AgendaParserServiceSpec extends Specification {
 
     def setup() {
         service.importAgendaData()
     }
+
+//    def "not duplicating the domain"(){
+//
+//        when:
+//        service.importAgendaData()
+//
+//        then:
+//        Day.count() == old(Day.count())
+//        Track.count() == old(Track.count())
+//        Slot.count() == old(Slot.count())
+//
+//    }
 
     def "imports agenda data from gr8conf site"() {
         expect:
@@ -31,7 +43,7 @@ class AgendaParserServiceSpec extends Specification {
         firstSlot.room == "AUD-1"
         firstSlot.name == "*) Getting Groovy Workshop"
         firstSlot.speakers.size() == 1
-        firstSlot.speakers.first() == "Hubert Klein Ikkink (Mr.HaKi)"
+        firstSlot.speakers.first().name == "Hubert Klein Ikkink (Mr.HaKi)"
         firstSlot.start == new Date("2013/05/22 09:00")
     }
 
@@ -42,8 +54,8 @@ class AgendaParserServiceSpec extends Specification {
         then:
         slot
         slot.speakers.size() == 2
-        "Cédric Champeau" in slot.speakers
-        "Andres Almiray" in slot.speakers
+        "Cédric Champeau" in slot.speakers*.name
+        "Andres Almiray" in slot.speakers*.name
     }
 
     def "imports breaks"() {

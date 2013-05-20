@@ -4,7 +4,7 @@ import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
-@Mock([Day, Track, Slot])
+@Mock([Day, Track, Slot, Speaker])
 @TestFor(Slot)
 class SlotSpec extends Specification {
 

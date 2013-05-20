@@ -4,11 +4,12 @@ package gr8app
 class Slot {
 
     String name
-    List<String> speakers
+    String room
     Date start
     Date end
     boolean pause = false
-    String room
+
+    static hasMany = [speakers:Speaker]
 
     static belongsTo = [track:Track]
     static transients = ['offtrack', 'trackName']
