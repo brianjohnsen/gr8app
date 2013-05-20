@@ -62,6 +62,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="grails-2.2.1" level="application" />
+    <orderEntry type="module" module-name="gr8app-grailsPlugins" />
   </component>
 </module>
 

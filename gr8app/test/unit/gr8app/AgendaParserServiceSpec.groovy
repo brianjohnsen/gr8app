@@ -19,10 +19,10 @@ class AgendaParserServiceSpec extends Specification {
         Day.count() == 3
         def days = Day.list()
         days.first().tracks.size() == 3
-        def aud1 = days.first().tracks.first()
-        aud1.room == "AUD-1"
-        aud1.name == "University Basic Trac"
-        def firstSlot = aud1.slots.first()
+        def track1 = days.first().tracks.first()
+        track1.name == "University Basic Trac"
+        def firstSlot = track1.slots.first()
+        firstSlot.room == "AUD-1"
         firstSlot.name == "*) Getting Groovy Workshop"
         firstSlot.speakers.size() == 1
         firstSlot.speakers.first() == "Hubert Klein Ikkink (Mr.HaKi)"
