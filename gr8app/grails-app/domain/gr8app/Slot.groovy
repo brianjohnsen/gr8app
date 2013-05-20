@@ -10,8 +10,17 @@ class Slot {
     boolean pause = false
     String room
 
-    static constraints = {
+    static belongsTo = [track:Track]
+    static transients = ['offtrack', 'trackName']
+
+    boolean getOfftrack(){
+        return trackName == "Offtrack"
     }
+
+    String getTrackName(){
+        track.name
+    }
+
 
     @Override
     String toString() {

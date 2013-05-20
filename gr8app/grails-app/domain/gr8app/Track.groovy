@@ -6,9 +6,6 @@ class Track {
 
     static hasMany = [slots: Slot]
 
-    static constraints = {
-    }
-
     @Override
     String toString() {
         "$name: slots = $slots"

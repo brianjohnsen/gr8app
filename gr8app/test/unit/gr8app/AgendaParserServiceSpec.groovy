@@ -34,17 +34,11 @@ class AgendaParserServiceSpec extends Specification {
     def "imports breaks"() {
         when:
         service.importAgendaData()
+        def pauser = Slot.findAllByPause(true)
 
         then:
-        def days = Day.list()
-        def track1 = days[1].tracks.first()
-//
-//        track1.name == "University Basic Trac"
-//        def firstSlot = track1.slots.first()
-//        firstSlot.room == "AUD-1"
-//        firstSlot.name == "*) Getting Groovy Workshop"
-//        firstSlot.speakers.size() == 1
-//        firstSlot.speakers.first() == "Hubert Klein Ikkink (Mr.HaKi)"
-//        firstSlot.start == new Date("2013/05/22 09:00")
+        pauser.size() > 5
+        "Lunch" in pauser*.name
+        "Coffee break" in pauser*.name
     }
 }
