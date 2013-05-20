@@ -1,15 +1,19 @@
 package org.gr8conf.gr8app
 
 import gr8app.Slot
+import gr8app.Track
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
 @TestFor(IntermissionService)
-@Mock(Slot)
+@Mock([Track, Slot])
 class IntermissionServiceSpec extends Specification {
 
+    Track track
+
     def setup() {
+        track = new Track(name: "sometrack").save(flush: true, failOnError: true)
         createAndSaveSlot("Aud1", new Date("5/22-2013 13:55"), new Date("5/22-2013 14:00"), 1, true)
         createAndSaveSlot("Aud1", new Date("5/22-2013 14:00"), new Date("5/22-2013 14:55"), 1)
         createAndSaveSlot("Aud1", new Date("5/22-2013 14:55"), new Date("5/22-2013 15:00"), 1, true)
@@ -38,6 +42,7 @@ class IntermissionServiceSpec extends Specification {
 
     void createAndSaveSlot(String room, Date start, Date end, int index, pause = false) {
         Slot slot = new Slot(room: room, start: start, end: end, name: pause ? "pause${index}" : "talk${index}", speaker: pause ? "" : "speaker${index}", pause: pause)
+        track.addToSlots(slot)
         slot.save(failOnError: true, flush: true)
     }
 
