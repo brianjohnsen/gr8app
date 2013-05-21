@@ -53,6 +53,8 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.1"
 
         compile ':cache:1.0.0'
+        compile ":quartz:1.0-RC7"
+
         test(":spock:0.7") {
             exclude "spock-grails-support"
         }
