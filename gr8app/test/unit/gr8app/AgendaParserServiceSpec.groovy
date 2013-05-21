@@ -17,17 +17,14 @@ class AgendaParserServiceSpec extends Specification {
     }
 
 
-//    def "not duplicating the domain"(){
-//
-//        when:
-//        service.importAgendaData()
-//
-//        then:
-//        Day.count() == old(Day.count())
-//        Track.count() == old(Track.count())
-//        Slot.count() == old(Slot.count())
-//
-//    }
+    def "not duplicating the domain"(){
+        when:
+        service.importAgendaData(data)
+
+        then:
+        Slot.count() == old(Slot.count())
+    }
+
 
     def "imports agenda data from gr8conf site"() {
         when:

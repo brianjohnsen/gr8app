@@ -27,7 +27,15 @@ class AgendaParserService {
     private addSlots(trackName, jsonTrack) {
         jsonTrack.schedules.each { jsonSchedule ->
             def speakers = jsonSchedule.presentation.speakers.collect { new Speaker(name: it.name, uri: it.uri) }
-            def slot = Slot.findByUri(jsonSchedule.presentation.uri) ?: new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, trackName: trackName, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate(), uri: jsonSchedule.presentation.uri)
+            def slot = Slot.findByUri(jsonSchedule.presentation.uri)
+            if (!slot) {
+                slot = new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, trackName: trackName, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate(), uri: jsonSchedule.presentation.uri)
+            } else {
+                new ArrayList(slot.speakers ?: []).each { speaker ->
+                    slot.removeFromSpeakers(speaker)
+                    speaker.delete()
+                }
+            }
             speakers.each { speaker ->
                 slot.addToSpeakers(speaker)
             }
@@ -42,7 +50,7 @@ class AgendaParserService {
 
     private addBreaks(jsonDay, jsonTrack) {
         jsonDay.breaks.each { brk ->
-            def pause = new Slot(name: brk.title, room: jsonTrack.room, trackName: jsonTrack.name, pause: true, start: brk.start.toDate(), end: brk.end.toDate(), uri: brk.uri)
+            def pause = Slot.findByUri(brk.uri) ?: new Slot(name: brk.title, room: jsonTrack.room, trackName: jsonTrack.name, pause: true, start: brk.start.toDate(), end: brk.end.toDate(), uri: brk.uri)
             pause.save(flush: true, failOnError: true)
         }
     }
