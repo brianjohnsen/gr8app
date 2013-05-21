@@ -28,7 +28,7 @@ class TalkController {
     }
 
     def intermission(String room) {
-        def slotsByRoom = intermissionService.getUpcomingSlotsByRoom()//new Date("05/22/2013 18:50"))
+        def slotsByRoom = intermissionService.getUpcomingSlotsByRoom()//new Date("2013/05/23 16:50"))
         room = room ?: (slotsByRoom.keySet() as List).first()
         def mainRoomSlots = slotsByRoom."$room"
         def remainingRooms = slotsByRoom.findAll { entry -> entry.key != room && !entry.value?.any { it.offtrack } }

@@ -55,7 +55,8 @@ class AgendaParserService {
 
     private addBreaks(jsonDay, jsonTrack) {
         jsonDay.breaks.each { brk ->
-            def pause = Slot.findByUri(brk.uri) ?: new Slot(name: brk.title, room: jsonTrack.room, trackName: jsonTrack.name, pause: true, start: brk.start.toDate(), end: brk.end.toDate(), uri: brk.uri)
+            def uri = "${brk.uri}_${jsonTrack.room}"
+            def pause = Slot.findByUri(uri) ?: new Slot(name: brk.title, room: jsonTrack.room, trackName: jsonTrack.name, pause: true, start: brk.start.toDate(), end: brk.end.toDate(), uri: uri)
             pause.save(flush: true, failOnError: true)
         }
     }
