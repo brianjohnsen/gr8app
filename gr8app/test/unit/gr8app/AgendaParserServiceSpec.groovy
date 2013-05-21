@@ -5,7 +5,7 @@ import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
-@Mock([Day, Track, Slot, Speaker])
+@Mock([Slot, Speaker])
 @TestFor(AgendaParserService)
 class AgendaParserServiceSpec extends Specification {
 
@@ -30,21 +30,11 @@ class AgendaParserServiceSpec extends Specification {
 //    }
 
     def "imports agenda data from gr8conf site"() {
-        expect:
-        Day.count() == 3
-
         when:
-        def days = Day.list()
+        def firstSlot = Slot.get(1)
 
         then:
-        days.first().tracks.size() == 3
-
-        and:
-        def track1 = days.first().tracks.first()
-        track1.name == "University Basic Trac"
-
-        and:
-        def firstSlot = track1.slots.first()
+        firstSlot.trackName == "University Basic Trac"
         firstSlot.room == "AUD-1"
         firstSlot.name == "*) Getting Groovy Workshop"
         firstSlot.speakers.size() == 1

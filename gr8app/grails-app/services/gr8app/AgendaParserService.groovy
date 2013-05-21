@@ -15,30 +15,24 @@ class AgendaParserService {
         }
 
         data.days.each { jsonDay ->
-            def day = Day.findByDay(jsonDay.day) ?: new Day(start: jsonDay.start.toDate(), end: jsonDay.end.toDate(), day: jsonDay.day).save(flush: true, failOnError: true)
             findTracks(jsonDay).each { jsonTrack ->
-                def track = Track.findByUri(jsonTrack.uri) ?: new Track(name: jsonTrack.name, uri: jsonTrack.uri)
-                addSlots(track, jsonTrack)
-                findBreaks(jsonDay, jsonTrack).each { brk ->
-                    track.addToSlots(brk)
-                }
-                day.addToTracks(track)
+                def trackName = jsonTrack.name
+                addSlots(trackName, jsonTrack)
+                addBreaks(jsonDay, jsonTrack)
             }
-            day.save(flush: true)
         }
     }
 
 
-    private Track addSlots(track, jsonTrack) {
+    private addSlots(trackName, jsonTrack) {
         jsonTrack.schedules.each { jsonSchedule ->
             def speakers = jsonSchedule.presentation.speakers.collect { new Speaker(name: it.name, uri: it.uri) }
-            def slot = Slot.findByUri(jsonSchedule.presentation.uri) ?: new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate(), uri: jsonSchedule.presentation.uri)
+            def slot = Slot.findByUri(jsonSchedule.presentation.uri) ?: new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, trackName: trackName, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate(), uri: jsonSchedule.presentation.uri)
             speakers.each { speaker ->
                 slot.addToSpeakers(speaker)
             }
-            track.addToSlots(slot)
+            slot.save(flush: true, failOnError: true)
         }
-        track
     }
 
     private List findTracks(jsonDay) {
@@ -46,8 +40,11 @@ class AgendaParserService {
         tracks
     }
 
-    private List<Slot> findBreaks(jsonDay, jsonTrack) {
-        jsonDay.breaks.collect { brk -> new Slot(name: brk.title, room: jsonTrack.room, pause: true, start: brk.start.toDate(), end: brk.end.toDate(), uri: brk.uri) }
+    private addBreaks(jsonDay, jsonTrack) {
+        jsonDay.breaks.each { brk ->
+            def pause = new Slot(name: brk.title, room: jsonTrack.room, trackName: jsonTrack.name, pause: true, start: brk.start.toDate(), end: brk.end.toDate(), uri: brk.uri)
+            pause.save(flush: true, failOnError: true)
+        }
     }
 
     private JSONElement callGr8conf() {

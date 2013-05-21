@@ -5,6 +5,7 @@ class Slot {
 
     String name
     String room
+    String trackName
     Date start
     Date end
     boolean pause = false
@@ -12,15 +13,10 @@ class Slot {
 
 
     static hasMany = [speakers:Speaker]
-    static belongsTo = [track:Track]
-    static transients = ['offtrack', 'trackName']
+    static transients = ['offtrack']
 
     boolean getOfftrack(){
         return trackName == "Offtrack"
-    }
-
-    String getTrackName(){
-        track.name
     }
 
 
