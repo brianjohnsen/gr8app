@@ -1,5 +1,6 @@
 package gr8app
 
+import grails.converters.JSON
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
@@ -8,9 +9,13 @@ import spock.lang.Specification
 @TestFor(AgendaParserService)
 class AgendaParserServiceSpec extends Specification {
 
+    def data
+
     def setup() {
-        service.importAgendaData()
+        data = JSON.parse(new File("data/gr8.json").text)
+        service.importAgendaData(data)
     }
+
 
 //    def "not duplicating the domain"(){
 //

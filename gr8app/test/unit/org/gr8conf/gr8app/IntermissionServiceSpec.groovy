@@ -13,7 +13,7 @@ class IntermissionServiceSpec extends Specification {
     Track track
 
     def setup() {
-        track = new Track(name: "sometrack").save(flush: true, failOnError: true)
+        track = new Track(name: "sometrack", uri: "someuri").save(flush: true, failOnError: true)
         createAndSaveSlot("Aud1", new Date("5/22-2013 13:55"), new Date("5/22-2013 14:00"), 1, true)
         createAndSaveSlot("Aud1", new Date("5/22-2013 14:00"), new Date("5/22-2013 14:55"), 1)
         createAndSaveSlot("Aud1", new Date("5/22-2013 14:55"), new Date("5/22-2013 15:00"), 1, true)
@@ -53,7 +53,7 @@ class IntermissionServiceSpec extends Specification {
     }
 
     def void createAndSaveSlot(String room, Date start, Date end, int index, pause = false) {
-        Slot slot = new Slot(room: room, start: start, end: end, name: pause ? "pause${index}" : "talk${index}", speaker: pause ? "" : "speaker${index}", pause: pause)
+        Slot slot = new Slot(room: room, start: start, end: end, name: pause ? "pause${index}" : "talk${index}", speaker: pause ? "" : "speaker${index}", pause: pause, uri: "uri$index")
         track.addToSlots(slot)
         slot.save(failOnError: true, flush: true)
     }

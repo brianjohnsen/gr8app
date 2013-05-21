@@ -6,7 +6,7 @@ import org.codehaus.groovy.grails.web.json.JSONElement
 class AgendaParserService {
 
 
-    void importAgendaData() {
+    void importAgendaData(data = callGr8conf()) {
         //FIXME: move to bootstrap
         String.metaClass.'static'.toDate = {
             def d = Date.parse("yyyy-MM-dd'T'HH:mm:ss", delegate)
@@ -14,11 +14,11 @@ class AgendaParserService {
             d
         }
 
-        def data = callGr8conf()
         data.days.each { jsonDay ->
-            def day = new Day(start: jsonDay.start.toDate(), end: jsonDay.end.toDate()).save(flush: true, failOnError: true)
+            def day = Day.findByDay(jsonDay.day) ?: new Day(start: jsonDay.start.toDate(), end: jsonDay.end.toDate(), day: jsonDay.day).save(flush: true, failOnError: true)
             findTracks(jsonDay).each { jsonTrack ->
-                def track = createTrackAndAddSlots(jsonTrack)
+                def track = Track.findByUri(jsonTrack.uri) ?: new Track(name: jsonTrack.name, uri: jsonTrack.uri)
+                addSlots(track, jsonTrack)
                 findBreaks(jsonDay, jsonTrack).each { brk ->
                     track.addToSlots(brk)
                 }
@@ -28,13 +28,13 @@ class AgendaParserService {
         }
     }
 
-    private Track createTrackAndAddSlots(jsonTrack) {
-        def track = new Track(name: jsonTrack.name)
+
+    private Track addSlots(track, jsonTrack) {
         jsonTrack.schedules.each { jsonSchedule ->
-            def speakers = jsonSchedule.presentation.speakers.collect { it.name }
-            def slot = new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate())
-            speakers.each {speaker->
-                slot.addToSpeakers(name: speaker)
+            def speakers = jsonSchedule.presentation.speakers.collect { new Speaker(name: it.name, uri: it.uri) }
+            def slot = Slot.findByUri(jsonSchedule.presentation.uri) ?: new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate(), uri: jsonSchedule.presentation.uri)
+            speakers.each { speaker ->
+                slot.addToSpeakers(speaker)
             }
             track.addToSlots(slot)
         }
@@ -47,7 +47,7 @@ class AgendaParserService {
     }
 
     private List<Slot> findBreaks(jsonDay, jsonTrack) {
-        jsonDay.breaks.collect { brk -> new Slot(name: brk.title, room: jsonTrack.room, pause: true, start: brk.start.toDate(), end: brk.end.toDate()) }
+        jsonDay.breaks.collect { brk -> new Slot(name: brk.title, room: jsonTrack.room, pause: true, start: brk.start.toDate(), end: brk.end.toDate(), uri: brk.uri) }
     }
 
     private JSONElement callGr8conf() {
@@ -55,4 +55,6 @@ class AgendaParserService {
         def data = JSON.parse(new URL(url).text)
         data
     }
+
+
 }

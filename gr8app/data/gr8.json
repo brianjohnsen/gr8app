@@ -1,0 +1,1023 @@
+{"uri": "/eu2013/Agenda", "lastModified": "2012-03-17T09:11:58Z", "days": [
+    {
+        "day": "2013-05-21T22:00:00Z",
+        "start": "2013-05-22T06:15:00Z",
+        "end": "2013-05-22T21:00:00Z",
+        "blocks": [
+            {
+                "start": "2013-05-22T07:00:00Z",
+                "end": "2013-05-22T16:45:00Z",
+                "names": ["University Basic Trac", "University Advanced Track"],
+                "tracks": [
+                    {
+                        "uri": "/eu2013/Agenda/University-Basic-Trac",
+                        "lastModified": "2013-05-12T10:33:07Z",
+                        "name": "University Basic Trac",
+                        "room": "AUD-1",
+                        "textColor": "#000000",
+                        "backgroundColor": "#958fff",
+                        "start": "2013-05-22T07:00:00Z",
+                        "end": "2013-05-22T16:45:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/University-Basic-Trac/---Getting-Groovy-Workshop",
+                                "lastModified": "2013-04-02T11:47:05Z",
+                                "title": "*) Getting Groovy Workshop",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Getting-Groovy-Workshop",
+                                    "lastModified": "2013-03-11T21:04:36Z",
+                                    "name": "*) Getting Groovy Workshop",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/MrHaKi",
+                                            "name": "Hubert Klein Ikkink (Mr.HaKi)"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-22T07:00:00Z",
+                                "end": "2013-05-22T10:00:00Z",
+                                "duration": 180
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/University-Basic-Trac/---Web-Development-with-Grails",
+                                "lastModified": "2013-04-02T11:48:17Z",
+                                "title": "*) Web Development with Grails Workshop",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/---Web-Development-with-Grails",
+                                    "lastModified": "2013-03-15T19:26:10Z",
+                                    "name": "*) Web Development with Grails Workshop",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Dr-Venkat-Subramaniam",
+                                            "name": "Dr. Venkat Subramaniam"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-22T11:00:00Z",
+                                "end": "2013-05-22T13:45:00Z",
+                                "duration": 165
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/University-Basic-Trac/---Gradle-Workshop",
+                                "lastModified": "2013-04-02T11:47:00Z",
+                                "title": "*) Gradle Workshop",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/---Gradle-Workshop",
+                                    "lastModified": "2013-03-19T13:30:36Z",
+                                    "name": "*) Gradle Workshop",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Luke-Daley",
+                                            "name": "Luke Daley"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-22T14:00:00Z",
+                                "end": "2013-05-22T16:45:00Z",
+                                "duration": 165
+                            }
+                        ]
+                    },
+                    {
+                        "uri": "/eu2013/Agenda/University-Advanced-Track",
+                        "lastModified": "2013-05-12T10:33:12Z",
+                        "name": "University Advanced Track",
+                        "room": "AUD-2",
+                        "textColor": "#000000",
+                        "backgroundColor": "#7672c4",
+                        "start": "2013-05-22T07:00:00Z",
+                        "end": "2013-05-22T16:45:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/University-Advanced-Track/---GPars-Workshop",
+                                "lastModified": "2013-04-02T11:49:31Z",
+                                "title": "*) GPars Workshop",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/---GPars-Workshop",
+                                    "lastModified": "2013-04-19T12:02:13Z",
+                                    "name": "*) GPars Workshop",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Russel-Winder",
+                                            "name": "Russel Winder"
+                                        },
+                                        {
+                                            "uri": "/eu2013/Speakers/Vaclav-Pech",
+                                            "name": "Václav Pech"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-22T11:00:00Z",
+                                "end": "2013-05-22T13:45:00Z",
+                                "duration": 165
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/University-Advanced-Track/---Unleashing-the-power-of-AST",
+                                "lastModified": "2013-04-02T11:49:41Z",
+                                "title": "*) Unleashing the power of AST transformations workshop",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/---Unleashing-the-power-of-AST",
+                                    "lastModified": "2013-03-15T19:48:05Z",
+                                    "name": "*) Unleashing the power of AST transformations workshop",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Cedric-Champeau",
+                                            "name": "Cédric Champeau"
+                                        },
+                                        {
+                                            "uri": "/eu2013/Speakers/Andres-Almiray",
+                                            "name": "Andres Almiray"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-22T14:00:00Z",
+                                "end": "2013-05-22T16:45:00Z",
+                                "duration": 165
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/University-Advanced-Track/---Async-Grails-Workshop",
+                                "lastModified": "2013-04-02T11:49:48Z",
+                                "title": "*) Async Grails Workshop",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/---Async-Grails-Workshop",
+                                    "lastModified": "2013-05-09T15:50:59Z",
+                                    "name": "*) Async Grails Workshop",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Colin-Harrington",
+                                            "name": "Colin Harrington"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-22T07:00:00Z",
+                                "end": "2013-05-22T10:00:00Z",
+                                "duration": 180
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "start": "2013-05-22T17:00:00Z",
+                "end": "2013-05-22T21:00:00Z",
+                "names": ["Offtrack"],
+                "tracks": [
+                    {
+                        "uri": "/eu2013/Agenda/Offtrack",
+                        "lastModified": "2013-03-20T13:42:22Z",
+                        "name": "Offtrack",
+                        "room": "ScrollBAR",
+                        "textColor": "#ffffff",
+                        "backgroundColor": "#00096b",
+                        "start": "2013-05-22T17:00:00Z",
+                        "end": "2013-05-22T21:00:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/Offtrack/Hackergarten-on-Tour",
+                                "lastModified": "2013-04-02T11:58:01Z",
+                                "title": "Hackergarten on Tour",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Hackergarten-on-tour",
+                                    "lastModified": "2013-03-11T11:47:12Z",
+                                    "name": "Hackergarten on Tour",
+                                    "speakers": []
+                                },
+                                "start": "2013-05-22T17:00:00Z",
+                                "end": "2013-05-22T21:00:00Z",
+                                "duration": 240
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "breaks": [
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-22-08-15",
+                "title": "Registration / light breakfast",
+                "start": "2013-05-22T06:15:00Z",
+                "end": "2013-05-22T07:00:00Z",
+                "duration": 45
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-22-10-30",
+                "title": "Coffeebreak",
+                "start": "2013-05-22T08:30:00Z",
+                "end": "2013-05-22T08:55:00Z",
+                "duration": 25
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-22-12-00",
+                "title": "Lunch",
+                "start": "2013-05-22T10:00:00Z",
+                "end": "2013-05-22T11:00:00Z",
+                "duration": 60
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-22-14-30",
+                "title": "Coffee Break",
+                "start": "2013-05-22T12:30:00Z",
+                "end": "2013-05-22T13:00:00Z",
+                "duration": 30
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-22-15-45",
+                "title": "Short break",
+                "start": "2013-05-22T13:45:00Z",
+                "end": "2013-05-22T14:00:00Z",
+                "duration": 15
+            }
+        ]
+    },
+    {
+        "day": "2013-05-22T22:00:00Z",
+        "start": "2013-05-23T06:00:00Z",
+        "end": "2013-05-23T19:30:00Z",
+        "blocks": [
+            {
+                "start": "2013-05-23T07:00:00Z",
+                "end": "2013-05-23T08:20:00Z",
+                "names": ["Keynotes"],
+                "tracks": [
+                    {
+                        "uri": "/eu2013/Agenda/Keynotes",
+                        "lastModified": "2013-03-20T13:46:30Z",
+                        "name": "Keynotes",
+                        "room": "AUD-1",
+                        "textColor": "#000000",
+                        "backgroundColor": "#bf700f",
+                        "start": "2013-05-23T07:00:00Z",
+                        "end": "2013-05-23T08:20:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/Keynotes/Keynote--The-rise-and-fall-of-",
+                                "lastModified": "2013-04-02T11:50:23Z",
+                                "title": "Keynote: The rise and fall of empires: Lessons for language designers and programmers",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Keynote--The-rise-and-fall-of-",
+                                    "lastModified": "2013-03-15T19:25:53Z",
+                                    "name": "Keynote: The rise and fall of empires: Lessons for language designers and programmers",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Dr-Venkat-Subramaniam",
+                                            "name": "Dr. Venkat Subramaniam"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T07:15:00Z",
+                                "end": "2013-05-23T08:20:00Z",
+                                "duration": 65
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Keynotes/Welcome-to-GR8Conf-2013",
+                                "lastModified": "2013-04-02T11:50:28Z",
+                                "title": "Welcome to GR8Conf 2013",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Welcome-to-GR8Conf",
+                                    "lastModified": "2013-03-08T20:33:03Z",
+                                    "name": "Welcome to GR8Conf 2013",
+                                    "speakers": []
+                                },
+                                "start": "2013-05-23T07:00:00Z",
+                                "end": "2013-05-23T07:15:00Z",
+                                "duration": 15
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "start": "2013-05-23T08:50:00Z",
+                "end": "2013-05-23T16:05:00Z",
+                "names": ["Grails Track", "Groovy Track"],
+                "tracks": [
+                    {
+                        "uri": "/eu2013/Agenda/Grails-Track",
+                        "lastModified": "2013-05-12T12:01:44Z",
+                        "name": "Grails Track",
+                        "room": "AUD-1",
+                        "textColor": "#000000",
+                        "backgroundColor": "#e59019",
+                        "start": "2013-05-23T08:50:00Z",
+                        "end": "2013-05-23T16:05:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Road-to-Grails-3.0",
+                                "lastModified": "2013-05-12T11:12:29Z",
+                                "title": "Road to Grails 3.0",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Road-to-Grails-3.0",
+                                    "lastModified": "2013-03-14T20:53:10Z",
+                                    "name": "Road to Grails 3.0",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Graeme-Rocher",
+                                            "name": "Graeme Rocher"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T11:40:00Z",
+                                "end": "2013-05-23T12:30:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Building-Grails-apps-with-Grad",
+                                "lastModified": "2013-05-12T11:30:05Z",
+                                "title": "Building Grails apps with Gradle.",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Building-Grails-apps-w-Gradle",
+                                    "lastModified": "2013-03-19T13:28:24Z",
+                                    "name": "Building Grails apps with Gradle.",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Luke-Daley",
+                                            "name": "Luke Daley"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T14:15:00Z",
+                                "end": "2013-05-23T15:05:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Writing-an-Extensible-Web-Test",
+                                "lastModified": "2013-05-12T11:12:28Z",
+                                "title": "Writing an Extensible Web Testing Framework ready for the Cloud",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Writing-an-Extensible-Web-Test",
+                                    "lastModified": "2013-03-08T20:33:04Z",
+                                    "name": "Writing an Extensible Web Testing Framework ready for the Cloud",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Mike-Ensor",
+                                            "name": "Mike Ensor"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T09:50:00Z",
+                                "end": "2013-05-23T10:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Using-Static-Analysis-with-Gra",
+                                "lastModified": "2013-04-02T11:52:16Z",
+                                "title": "Using Static Analysis with Grails",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Using-Static-Analysis-with-Gra",
+                                    "lastModified": "2013-03-14T21:13:46Z",
+                                    "name": "Using Static Analysis with Grails",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Jeff-Beck",
+                                            "name": "Jeff Beck"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T08:50:00Z",
+                                "end": "2013-05-23T09:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Grails-Plugin-Best-Practices",
+                                "lastModified": "2013-04-02T11:52:33Z",
+                                "title": "Grails Plugin Best Practices",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Grails-Plugin-Best-Practices",
+                                    "lastModified": "2013-03-14T20:49:53Z",
+                                    "name": "Grails Plugin Best Practices",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Burt-Beckwith",
+                                            "name": "Burt Beckwith"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T12:40:00Z",
+                                "end": "2013-05-23T13:30:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Grails-Under-The-Hood",
+                                "lastModified": "2013-05-12T11:30:06Z",
+                                "title": "Grails Under The Hood",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Grails-Under-The-Hood",
+                                    "lastModified": "2013-05-12T10:40:45Z",
+                                    "name": "Grails Under The Hood",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Graeme-Rocher",
+                                            "name": "Graeme Rocher"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T15:15:00Z",
+                                "end": "2013-05-23T16:05:00Z",
+                                "duration": 50
+                            }
+                        ]
+                    },
+                    {
+                        "uri": "/eu2013/Agenda/Groovy-Track",
+                        "lastModified": "2013-05-13T11:54:10Z",
+                        "name": "Groovy Track",
+                        "room": "AUD-2",
+                        "textColor": "#000000",
+                        "backgroundColor": "#ffb17d",
+                        "start": "2013-05-23T08:50:00Z",
+                        "end": "2013-05-23T16:05:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Lift-off-with-Groovy-2.1",
+                                "lastModified": "2013-04-02T11:55:46Z",
+                                "title": "Lift-off with Groovy 2.1",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Lift-off-with-Groovy-2.1",
+                                    "lastModified": "2013-03-08T18:54:05Z",
+                                    "name": "Lift-off with Groovy 2.1",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Guillaume-Laforge",
+                                            "name": "Guillaume Laforge"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T08:50:00Z",
+                                "end": "2013-05-23T09:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Enterprise-Desktop-apps-with-G",
+                                "lastModified": "2013-05-12T11:12:30Z",
+                                "title": "Enterprise Desktop apps with GroovyFX and OpenDolphin",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Enterprise-Desktop-apps-with-G",
+                                    "lastModified": "2013-03-18T15:38:41Z",
+                                    "name": "Enterprise Desktop apps with GroovyFX and OpenDolphin",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Dierk-Koenig",
+                                            "name": "Dierk König"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T11:00:00Z",
+                                "end": "2013-05-23T11:30:00Z",
+                                "duration": 30
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Functional-Programming-in-Groo",
+                                "lastModified": "2013-04-02T11:55:55Z",
+                                "title": "Functional Programming in Groovy",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Functional-Programming-in-Groo",
+                                    "lastModified": "2013-03-15T19:26:42Z",
+                                    "name": "Functional Programming in Groovy",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Dr-Venkat-Subramaniam",
+                                            "name": "Dr. Venkat Subramaniam"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T12:40:00Z",
+                                "end": "2013-05-23T13:30:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Getting-Groovier-with-Vert.x",
+                                "lastModified": "2013-05-12T11:30:06Z",
+                                "title": "Getting Groovier with Vert.x",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Getting-Groovier-with-Vert.x",
+                                    "lastModified": "2013-03-08T20:33:04Z",
+                                    "name": "Getting Groovier with Vert.x",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Hitesh-Bhatia",
+                                            "name": "Hitesh Bhatia"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T14:15:00Z",
+                                "end": "2013-05-23T15:05:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Raspberry-Pi---la-GroovyFX",
+                                "lastModified": "2013-04-02T11:56:36Z",
+                                "title": "Raspberry Pi à la GroovyFX",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Raspberry-Pi-a-la-GroovyFX",
+                                    "lastModified": "2013-03-08T18:57:01Z",
+                                    "name": "Raspberry Pi à la GroovyFX",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Stephen-Chin",
+                                            "name": "Stephen Chin"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T09:50:00Z",
+                                "end": "2013-05-23T10:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Ready--Steady--Transform..",
+                                "lastModified": "2013-05-12T11:30:06Z",
+                                "title": "Ready, Steady, Transform..",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Ready--Steady--Transform",
+                                    "lastModified": "2013-04-15T14:32:55Z",
+                                    "name": "Ready, Steady, Transform..",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Niels-Bech-Nielsen",
+                                            "name": "Niels Bech Nielsen"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T15:15:00Z",
+                                "end": "2013-05-23T16:05:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/A-GPars-how-to-guide",
+                                "lastModified": "2013-04-19T14:48:08Z",
+                                "title": "A GPars how-to-guide",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/GPars-how-to-guide",
+                                    "lastModified": "2013-04-19T12:05:00Z",
+                                    "name": "A GPars how-to-guide",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Vaclav-Pech",
+                                            "name": "Václav Pech"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-23T11:40:00Z",
+                                "end": "2013-05-23T12:30:00Z",
+                                "duration": 50
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "start": "2013-05-23T16:30:00Z",
+                "end": "2013-05-23T19:30:00Z",
+                "names": ["Offtrack"],
+                "tracks": [
+                    {
+                        "uri": "/eu2013/Agenda/Offtrack",
+                        "lastModified": "2013-03-20T13:42:22Z",
+                        "name": "Offtrack",
+                        "room": "ScrollBAR",
+                        "textColor": "#ffffff",
+                        "backgroundColor": "#00096b",
+                        "start": "2013-05-23T16:30:00Z",
+                        "end": "2013-05-23T19:30:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/Offtrack/Meet-n-greet",
+                                "lastModified": "2013-05-12T11:30:06Z",
+                                "title": "Meet'n'greet",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Meet-n-greet",
+                                    "lastModified": "2013-03-08T20:33:03Z",
+                                    "name": "Meet'n'greet",
+                                    "speakers": []
+                                },
+                                "start": "2013-05-23T16:30:00Z",
+                                "end": "2013-05-23T19:30:00Z",
+                                "duration": 180
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "breaks": [
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-23-08-00",
+                "title": "Registration / light breakfast",
+                "start": "2013-05-23T06:00:00Z",
+                "end": "2013-05-23T07:00:00Z",
+                "duration": 60
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-23-10-20",
+                "title": "Coffee break",
+                "start": "2013-05-23T08:20:00Z",
+                "end": "2013-05-23T08:45:00Z",
+                "duration": 25
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-23-12-40",
+                "title": "Lunch",
+                "start": "2013-05-23T10:40:00Z",
+                "end": "2013-05-23T11:40:00Z",
+                "duration": 60
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-23-15-30",
+                "title": "Coffee break and surprise!",
+                "start": "2013-05-23T13:30:00Z",
+                "end": "2013-05-23T14:00:00Z",
+                "duration": 30
+            }
+        ]
+    },
+    {
+        "day": "2013-05-23T22:00:00Z",
+        "start": "2013-05-24T06:00:00Z",
+        "end": "2013-05-24T16:00:00Z",
+        "blocks": [
+            {
+                "start": "2013-05-24T06:30:00Z",
+                "end": "2013-05-24T16:00:00Z",
+                "names": ["Grails Track", "Groovy Track"],
+                "tracks": [
+                    {
+                        "uri": "/eu2013/Agenda/Grails-Track",
+                        "lastModified": "2013-05-12T12:01:44Z",
+                        "name": "Grails Track",
+                        "room": "AUD-1",
+                        "textColor": "#000000",
+                        "backgroundColor": "#e59019",
+                        "start": "2013-05-24T06:30:00Z",
+                        "end": "2013-05-24T16:00:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Grails-Goodness",
+                                "lastModified": "2013-05-12T12:56:32Z",
+                                "title": "Grails Goodness",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Grails-Goodness",
+                                    "lastModified": "2013-03-11T21:04:43Z",
+                                    "name": "Grails Goodness",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/MrHaKi",
+                                            "name": "Hubert Klein Ikkink (Mr.HaKi)"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T10:00:00Z",
+                                "end": "2013-05-24T10:50:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/We-chose-Grails-and-Groovy-for",
+                                "lastModified": "2013-04-02T11:51:56Z",
+                                "title": "We chose Grails and Groovy for a real-world project. Was it wise?",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/We-chose-Grails-and-Groovy-for",
+                                    "lastModified": "2013-03-08T20:33:04Z",
+                                    "name": "We chose Grails and Groovy for a real-world project. Was it wise?",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Jan-Reher",
+                                            "name": "Jan Reher"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T06:30:00Z",
+                                "end": "2013-05-24T07:20:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Using-Grails-to-power-your-ele",
+                                "lastModified": "2013-05-14T07:15:55Z",
+                                "title": "Using Grails to power your electric car!",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Using-Grails-to-power-your-ele",
+                                    "lastModified": "2013-03-12T14:18:07Z",
+                                    "name": "Using Grails to power your electric car!",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Marco-Pas",
+                                            "name": "Marco Pas"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T12:50:00Z",
+                                "end": "2013-05-24T13:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Good-Form---complex-web-forms-",
+                                "lastModified": "2013-05-12T11:14:42Z",
+                                "title": "Good Form - complex web forms made Groovy",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Good-Form---complex-web-forms-",
+                                    "lastModified": "2013-03-18T20:48:17Z",
+                                    "name": "Good Form - complex web forms made Groovy",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Peter-McNeil",
+                                            "name": "Peter McNeil"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T07:30:00Z",
+                                "end": "2013-05-24T08:20:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Searching-for-the-Grail",
+                                "lastModified": "2013-05-14T07:15:55Z",
+                                "title": "Searching for the Grail",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Searching-for-the-Grail",
+                                    "lastModified": "2013-03-22T08:02:23Z",
+                                    "name": "Searching for the Grail",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Noam-Tenne",
+                                            "name": "Noam Tenne"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T15:10:00Z",
+                                "end": "2013-05-24T16:00:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Trench-code",
+                                "lastModified": "2013-05-12T12:30:34Z",
+                                "title": "Trench code",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Trench-code",
+                                    "lastModified": "2013-03-08T20:33:03Z",
+                                    "name": "Trench code",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Edwin-Van-Nes",
+                                            "name": "Edwin Van Nes"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T11:50:00Z",
+                                "end": "2013-05-24T12:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Speed-up-your-development--Gro",
+                                "lastModified": "2013-05-12T12:30:34Z",
+                                "title": "Speed up your development: GroovyServ and Grails Improx Plugin",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Speed-up-your-development--Gro",
+                                    "lastModified": "2013-03-25T22:36:23Z",
+                                    "name": "Speed up your development: GroovyServ and Grails Improx Plugin",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Yasuharu-Nakano",
+                                            "name": "Yasuharu Nakano"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T09:00:00Z",
+                                "end": "2013-05-24T09:50:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Grails-Track/Grails-Transactions",
+                                "lastModified": "2013-05-12T12:30:35Z",
+                                "title": "Grails Transactions",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Grails-Transactions",
+                                    "lastModified": "2013-04-19T14:51:02Z",
+                                    "name": "Grails Transactions",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Burt-Beckwith",
+                                            "name": "Burt Beckwith"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T14:10:00Z",
+                                "end": "2013-05-24T15:00:00Z",
+                                "duration": 50
+                            }
+                        ]
+                    },
+                    {
+                        "uri": "/eu2013/Agenda/Groovy-Track",
+                        "lastModified": "2013-05-13T11:54:10Z",
+                        "name": "Groovy Track",
+                        "room": "AUD-2",
+                        "textColor": "#000000",
+                        "backgroundColor": "#ffb17d",
+                        "start": "2013-05-24T06:30:00Z",
+                        "end": "2013-05-24T16:00:00Z",
+                        "schedules": [
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/The-next-generation-MOP",
+                                "lastModified": "2013-05-12T12:30:35Z",
+                                "title": "The next generation MOP",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/The-next-generation-MOP",
+                                    "lastModified": "2013-03-18T13:30:29Z",
+                                    "name": "The next generation MOP",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Jochen-Theodorou",
+                                            "name": "Jochen Theodorou"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T14:10:00Z",
+                                "end": "2013-05-24T15:00:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Griffon-Update",
+                                "lastModified": "2013-04-02T11:55:35Z",
+                                "title": "Griffon Update",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Griffon-Update",
+                                    "lastModified": "2013-03-11T10:51:51Z",
+                                    "name": "Griffon Update",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Andres-Almiray",
+                                            "name": "Andres Almiray"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T07:30:00Z",
+                                "end": "2013-05-24T08:20:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Groovy-Goodness",
+                                "lastModified": "2013-05-12T12:30:35Z",
+                                "title": "Groovy Goodness",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Groovys-goodness",
+                                    "lastModified": "2013-03-11T21:04:49Z",
+                                    "name": "Groovy Goodness",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/MrHaKi",
+                                            "name": "Hubert Klein Ikkink (Mr.HaKi)"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T09:00:00Z",
+                                "end": "2013-05-24T09:50:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Spring-4-and-Groovy-2",
+                                "lastModified": "2013-05-12T12:30:35Z",
+                                "title": "Spring 4 and Groovy 2",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Spring-4-and-Groovy-2",
+                                    "lastModified": "2013-03-18T20:25:19Z",
+                                    "name": "Spring 4 and Groovy 2",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Juergen-Hoeller",
+                                            "name": "Juergen Hoeller"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T10:00:00Z",
+                                "end": "2013-05-24T10:50:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Is-Groovy-as-Fast-as-Java-",
+                                "lastModified": "2013-04-02T11:56:13Z",
+                                "title": "Is Groovy as Fast as Java?",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Is-Groovy-as-Fast-as-Java-",
+                                    "lastModified": "2013-03-15T10:54:33Z",
+                                    "name": "Is Groovy as Fast as Java?",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Russel-Winder",
+                                            "name": "Russel Winder"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T06:30:00Z",
+                                "end": "2013-05-24T07:20:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Type-checking-your-DSLs",
+                                "lastModified": "2013-05-12T12:30:35Z",
+                                "title": "Type checking your DSLs",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Type-checking-your-DSLs",
+                                    "lastModified": "2013-03-15T19:49:46Z",
+                                    "name": "Type checking your DSLs",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Cedric-Champeau",
+                                            "name": "Cédric Champeau"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T11:50:00Z",
+                                "end": "2013-05-24T12:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Geb---Totally-Groovy-Browser-A",
+                                "lastModified": "2013-05-12T12:30:36Z",
+                                "title": "Geb - Totally Groovy Browser Automation",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Geb-Groovy-Browser-Automation",
+                                    "lastModified": "2013-04-19T14:38:19Z",
+                                    "name": "Geb - Totally Groovy Browser Automation",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Luke-Daley",
+                                            "name": "Luke Daley"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T15:10:00Z",
+                                "end": "2013-05-24T16:00:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/Ratpack",
+                                "lastModified": "2013-05-12T12:30:36Z",
+                                "title": "Ratpack",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Ratpack",
+                                    "lastModified": "2013-05-12T11:22:45Z",
+                                    "name": "Ratpack - a Groovy Micro Web Framework",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Luke-Daley",
+                                            "name": "Luke Daley"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T12:50:00Z",
+                                "end": "2013-05-24T13:40:00Z",
+                                "duration": 50
+                            },
+                            {
+                                "uri": "/eu2013/Agenda/Groovy-Track/What-s-new-in-Gaelyk-2.0",
+                                "lastModified": "2013-05-13T11:54:10Z",
+                                "title": "What's new in Gaelyk 2.0",
+                                "presentation": {
+                                    "uri": "/eu2013/Presentations/Whats-new-in-Gaelyk-2.0",
+                                    "lastModified": "2013-05-13T11:53:27Z",
+                                    "name": "What's new in Gaelyk 2.0",
+                                    "speakers": [
+                                        {
+                                            "uri": "/eu2013/Speakers/Vladimir-Orany",
+                                            "name": "Vladimír Oraný"
+                                        }
+                                    ]
+                                },
+                                "start": "2013-05-24T11:00:00Z",
+                                "end": "2013-05-24T11:30:00Z",
+                                "duration": 30
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "breaks": [
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-24-08-00",
+                "title": "Light breakfast",
+                "start": "2013-05-24T06:00:00Z",
+                "end": "2013-05-24T06:25:00Z",
+                "duration": 25
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-24-10-20",
+                "title": "Coffee break",
+                "start": "2013-05-24T08:20:00Z",
+                "end": "2013-05-24T08:45:00Z",
+                "duration": 25
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-24-12-50",
+                "title": "Lunch",
+                "start": "2013-05-24T10:50:00Z",
+                "end": "2013-05-24T11:50:00Z",
+                "duration": 60
+            },
+            {
+                "uri": "/eu2013/Agenda/break-2013-05-24-15-40",
+                "title": "Coffee break",
+                "start": "2013-05-24T13:40:00Z",
+                "end": "2013-05-24T14:10:00Z",
+                "duration": 30
+            }
+        ]
+    }
+]}

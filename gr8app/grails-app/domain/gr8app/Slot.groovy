@@ -8,9 +8,10 @@ class Slot {
     Date start
     Date end
     boolean pause = false
+    String uri
+
 
     static hasMany = [speakers:Speaker]
-
     static belongsTo = [track:Track]
     static transients = ['offtrack', 'trackName']
 
