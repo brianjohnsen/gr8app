@@ -13,7 +13,7 @@ class TalkController {
     }
 
     def counter(long slotId, String room) {
-        [slotId:slotId, room:room]
+        [slotId: slotId, room: room]
     }
 
     def slotRemainingTimeAJAX(long slotId) {
@@ -22,14 +22,18 @@ class TalkController {
         render slotInformation as JSON
     }
 
+    def select() {
+        def rooms = Slot.list().groupBy { it.room }.keySet()
+        [rooms:rooms]
+    }
 
     def intermission(String room) {
         def slotsByRoom = intermissionService.getUpcomingSlotsByRoom()//new Date("05/22/2013 18:50"))
         room = room ?: (slotsByRoom.keySet() as List).first()
         def mainRoomSlots = slotsByRoom."$room"
-        def remainingRooms = slotsByRoom.findAll { entry -> entry.key != room && !entry.value?.any{it.offtrack}}
-        def offTrack = slotsByRoom.findAll {entry -> entry.value?.any{it.offtrack}}
-        [mainRoom: room, mainRoomSlots: mainRoomSlots, remainingRooms: remainingRooms, offTrack:offTrack, upcomingSlotId: mainRoomSlots ? mainRoomSlots[0].id : -1]
+        def remainingRooms = slotsByRoom.findAll { entry -> entry.key != room && !entry.value?.any { it.offtrack } }
+        def offTrack = slotsByRoom.findAll { entry -> entry.value?.any { it.offtrack } }
+        [mainRoom: room, mainRoomSlots: mainRoomSlots, remainingRooms: remainingRooms, offTrack: offTrack, upcomingSlotId: mainRoomSlots ? mainRoomSlots[0].id : -1]
     }
 
 }
