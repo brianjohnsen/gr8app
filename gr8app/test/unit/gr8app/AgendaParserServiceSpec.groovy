@@ -17,12 +17,25 @@ class AgendaParserServiceSpec extends Specification {
     }
 
 
-    def "not duplicating the domain"(){
+    def "not duplicating the domain"() {
+        setup:
+
+
         when:
         service.importAgendaData(data)
 
         then:
         Slot.count() == old(Slot.count())
+    }
+
+    def "strip name"() {
+        expect:
+        service.stripTalkName(name) == stripped
+
+        where:
+        name                                      | stripped
+        "*) Getting Groovy Workshop"              | "Getting Groovy Workshop"
+        "*) Web Development with Grails Workshop" | "Web Development with Grails Workshop"
     }
 
 
@@ -33,7 +46,7 @@ class AgendaParserServiceSpec extends Specification {
         then:
         firstSlot.trackName == "University Basic Trac"
         firstSlot.room == "AUD-1"
-        firstSlot.name == "*) Getting Groovy Workshop"
+        firstSlot.name == "Getting Groovy Workshop"
         firstSlot.speakers.size() == 1
         firstSlot.speakers.first().name == "Hubert Klein Ikkink (Mr.HaKi)"
         firstSlot.start == new Date("2013/05/22 09:00")
@@ -41,7 +54,7 @@ class AgendaParserServiceSpec extends Specification {
 
     def "multiple speakers"() {
         when:
-        def slot = Slot.findByName("*) Unleashing the power of AST transformations workshop")
+        def slot = Slot.findByName("Unleashing the power of AST transformations workshop")
 
         then:
         slot

@@ -29,7 +29,8 @@ class AgendaParserService {
             def speakers = jsonSchedule.presentation.speakers.collect { new Speaker(name: it.name, uri: it.uri) }
             def slot = Slot.findByUri(jsonSchedule.presentation.uri)
             if (!slot) {
-                slot = new Slot(name: jsonSchedule.presentation.name, room: jsonTrack.room, trackName: trackName, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate(), uri: jsonSchedule.presentation.uri)
+                String name = stripTalkName(jsonSchedule.presentation.name)
+                slot = new Slot(name: name, room: jsonTrack.room, trackName: trackName, start: jsonSchedule.start.toDate(), end: jsonSchedule.end.toDate(), uri: jsonSchedule.presentation.uri)
             } else {
                 new ArrayList(slot.speakers ?: []).each { speaker ->
                     slot.removeFromSpeakers(speaker)
@@ -41,6 +42,10 @@ class AgendaParserService {
             }
             slot.save(flush: true, failOnError: true)
         }
+    }
+
+    private String stripTalkName(String name) {
+        name.replace("*) ", "")
     }
 
     private List findTracks(jsonDay) {
