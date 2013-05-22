@@ -63,7 +63,7 @@ class AgendaParserService {
 
     private JSONElement callGr8conf() {
         def url = "http://gr8conf.org/mobile/eu2013/Agenda"
-        def data = JSON.parse(new URL(url).text)
+        def data = JSON.parse(new URL(url).getText("UTF-8"))
         data
     }
 
