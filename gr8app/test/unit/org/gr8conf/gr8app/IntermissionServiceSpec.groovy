@@ -36,11 +36,23 @@ class IntermissionServiceSpec extends Specification {
         upcomingSlots.size() == 2
         upcomingSlots."Aud1".size() == 3
         upcomingSlots."Aud2".size() == 3
-        upcomingSlots.values().flatten().findAll {it.pause }.size() == 2
+        upcomingSlots.values().flatten().findAll { it.pause }.size() == 2
     }
 
+    def "calculateRemainder returns 0 when past ending time and remaining time in minutes otherwise"() {
+        expect:
+        service.calculateRemainingTime(1, new Date("5/22-2013 14:55")) == 0
 
-    void createAndSaveSlot(String room, Date start, Date end, int index, pause = false) {
+        where:
+        slotId | date              | result
+        1      | "5/22-2013 14:55" | 0
+        1      | "5/22-2013 13:55" | 5
+        1      | "5/22-2013 12:55" | 65
+        -1     | "5/22-2013 12:55" | 0
+
+    }
+
+    def void createAndSaveSlot(String room, Date start, Date end, int index, pause = false) {
         Slot slot = new Slot(room: room, start: start, end: end, name: pause ? "pause${index}" : "talk${index}", speaker: pause ? "" : "speaker${index}", pause: pause)
         track.addToSlots(slot)
         slot.save(failOnError: true, flush: true)

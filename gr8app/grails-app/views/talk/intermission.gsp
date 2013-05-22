@@ -52,5 +52,10 @@
             </div>
         </g:each>
     </div>
+<r:script>
+    $(document).keypress(function(event) {
+        if (event.which === 32) { window.location = '${g.createLink(action:'counter', params:[slotId:upcomingSlotId, room: mainRoom])}'; }
+    });
+</r:script>
 </body>
 </html>

@@ -7,24 +7,29 @@
 </head>
 <body>
 <div class="countercontainer">
-   <h1 id='counter'>12</h1>
+   <h1 id='counter'></h1>
 
 </div>
 
 
 <r:script>
+    updateRemainingTime()
     $("#counter").fitText(0.2);
-    var counterInterval = window.setInterval(counter, 1000);
     var updateInterval = window.setInterval(updateRemainingTime, 5000);
+    var counterInterval = window.setInterval(counter, 60*1000);
+    $(document).keypress(function(event) {
+        if (event.which === 32) { window.location = '${g.createLink(action:'intermission', params:[room:room])}'; }
+    });
 
     function counter() {
         var counter = $('#counter');
-        counter.html(parseInt(counter.html()) - 1);
-        counter.fitText(0.2);
-        setCounterColor(counter)
         if (counter.html() == 0) {
             clearInterval(counterInterval);
             clearInterval(updateInterval);
+        } else {
+            counter.html(parseInt(counter.html()) - 1);
+            counter.fitText(0.2);
+            setCounterColor(counter)
         }
     }
 

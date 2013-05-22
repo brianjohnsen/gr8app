@@ -8,7 +8,7 @@ class IntermissionService {
     Map<String, List<Slot>> getUpcomingSlotsByRoom(Date time = new Date()) {
         Date endTime
         use([groovy.time.TimeCategory]) {
-            endTime = (time + 4.hours)
+            endTime = (time + 3.hours)
         }
         def restOfDaySlots = Slot.findAllByEndBetweenOrStartBetween(time, endTime, time, endTime)
         def roomMappedSlots = restOfDaySlots.groupBy { it.room }
@@ -37,6 +37,22 @@ class IntermissionService {
             }
         }
         keepSlots
+    }
+
+    def calculateRemainingTime(long slotId, now = new Date()) {
+        use([groovy.time.TimeCategory]) {
+
+            Slot slot = Slot.get(slotId)
+            if (!slot) return 0
+            Date end = slot.end
+
+            BigInteger remainderInMinutes = (end - now).toMilliseconds() /(60*1000)
+
+            def adaptedRemainder = Math.max(remainderInMinutes, new BigInteger(0))
+            return adaptedRemainder
+        }
+
+
     }
 
 
