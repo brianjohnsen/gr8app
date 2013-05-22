@@ -15,7 +15,7 @@
 <r:script>
     updateRemainingTime()
     $("#counter").fitText(0.2);
-    var updateInterval = window.setInterval(updateRemainingTime, 5000);
+    var updateInterval = window.setInterval(updateRemainingTime, 60*5*1000);
     var counterInterval = window.setInterval(counter, 60*1000);
     $(document).keypress(function(event) {
         if (event.which === 32) { window.location = '${g.createLink(action:'intermission', params:[room:room])}'; }
