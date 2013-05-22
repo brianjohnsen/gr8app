@@ -9,11 +9,14 @@ import spock.lang.Specification
 class SlotSpec extends Specification {
 
     def setup() {
-        new AgendaParserService().importAgendaData()
+        StringMetaHelper.addToDateToStringMetaClass()
     }
 
 
     def "track name"() {
+        setup:
+        new AgendaParserService().importAgendaData()
+
         expect:
         Slot.findByName(slotName).trackName == trackName
         Slot.findByName(slotName).offtrack == offtrack

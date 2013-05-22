@@ -7,13 +7,6 @@ class AgendaParserService {
 
 
     void importAgendaData(data = callGr8conf()) {
-        //FIXME: move to bootstrap
-        String.metaClass.'static'.toDate = {
-            def d = Date.parse("yyyy-MM-dd'T'HH:mm:ss", delegate)
-            d.hours += 2
-            d
-        }
-
         data.days.each { jsonDay ->
             findTracks(jsonDay).each { jsonTrack ->
                 def trackName = jsonTrack.name
@@ -63,8 +56,7 @@ class AgendaParserService {
 
     private JSONElement callGr8conf() {
         def url = "http://gr8conf.org/mobile/eu2013/Agenda"
-        def data = JSON.parse(new URL(url).getText("UTF-8"))
-        data
+        JSON.parse(new URL(url).getText("UTF-8"))
     }
 
 

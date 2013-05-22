@@ -12,6 +12,7 @@ class AgendaParserServiceSpec extends Specification {
     def data
 
     def setup() {
+        StringMetaHelper.addToDateToStringMetaClass()
         data = JSON.parse(new File("data/gr8.json").text)
         service.importAgendaData(data)
     }

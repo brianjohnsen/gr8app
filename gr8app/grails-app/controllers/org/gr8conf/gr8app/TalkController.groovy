@@ -24,11 +24,12 @@ class TalkController {
 
     def select() {
         def rooms = Slot.list().groupBy { it.room }.keySet()
-        [rooms:rooms]
+        [rooms: rooms]
     }
 
     def intermission(String room) {
-        def slotsByRoom = intermissionService.getUpcomingSlotsByRoom()//new Date("2013/05/23 16:50"))
+        def date = params.date('date', 'yyyyMMddHHmm') ?: new Date()
+        def slotsByRoom = intermissionService.getUpcomingSlotsByRoom(date)
         room = room ?: (slotsByRoom.keySet() as List).first()
         def mainRoomSlots = slotsByRoom."$room"
         def remainingRooms = slotsByRoom.findAll { entry -> entry.key != room && !entry.value?.any { it.offtrack } }
