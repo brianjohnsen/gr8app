@@ -19,9 +19,6 @@ class AgendaParserServiceSpec extends Specification {
 
 
     def "not duplicating the domain"() {
-        setup:
-
-
         when:
         service.importAgendaData(data)
 

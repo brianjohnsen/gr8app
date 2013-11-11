@@ -1,5 +1,6 @@
 package gr8app
 
+import grails.converters.JSON
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
@@ -8,6 +9,8 @@ import spock.lang.Specification
 @TestFor(Slot)
 class SlotSpec extends Specification {
 
+    private final data = JSON.parse(new File("data/gr8.json").text)
+
     def setup() {
         StringMetaHelper.addToDateToStringMetaClass()
     }
@@ -15,7 +18,8 @@ class SlotSpec extends Specification {
 
     def "track name"() {
         setup:
-        new AgendaParserService().importAgendaData()
+        new AgendaParserService().importAgendaData(data)
+//        new AgendaParserService().importAgendaData()
 
         expect:
         Slot.findByName(slotName).trackName == trackName
