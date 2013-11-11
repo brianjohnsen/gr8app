@@ -1,5 +1,7 @@
-package gr8app
+package org.gr8conf.trackapp
 
+import org.gr8conf.trackapp.Slot
+import org.gr8conf.trackapp.Speaker
 import grails.converters.JSON
 import org.codehaus.groovy.grails.web.json.JSONElement
 

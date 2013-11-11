@@ -1,7 +1,6 @@
-package org.gr8conf.gr8app
+package org.gr8conf.trackapp
 
-import gr8app.Slot
-import groovy.time.*
+import org.gr8conf.trackapp.Slot
 
 class IntermissionService {
 

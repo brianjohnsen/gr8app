@@ -1,5 +1,5 @@
-import gr8app.AgendaParserService
-import gr8app.StringMetaHelper
+import org.gr8conf.trackapp.AgendaParserService
+import org.gr8conf.trackapp.StringMetaHelper
 import grails.converters.JSON
 import grails.util.Environment
 

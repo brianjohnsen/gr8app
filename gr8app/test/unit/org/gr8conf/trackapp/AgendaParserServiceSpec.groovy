@@ -1,8 +1,9 @@
-package gr8app
+package org.gr8conf.trackapp
 
 import grails.converters.JSON
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
+import org.gr8conf.trackapp.AgendaParserService
 import spock.lang.Specification
 
 @Mock([Slot, Speaker])

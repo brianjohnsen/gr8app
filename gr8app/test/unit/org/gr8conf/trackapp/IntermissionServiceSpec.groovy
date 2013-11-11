@@ -1,6 +1,6 @@
-package org.gr8conf.gr8app
+package org.gr8conf.trackapp
 
-import gr8app.Slot
+import org.gr8conf.trackapp.Slot
 
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
